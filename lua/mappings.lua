@@ -56,3 +56,4 @@ map("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 map("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+map("n", "<leader>a", "ggVG", { noremap = true , silent = true})
