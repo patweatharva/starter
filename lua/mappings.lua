@@ -56,4 +56,14 @@ map("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 map("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
-map("n", "<leader>a", "ggVG", { noremap = true , silent = true})
+map("n", "<leader>a", "ggVG", { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { buffer = true, desc = "Start Markdown Preview" })
+        vim.keymap.set("n", "<leader>ms", ":MarkdownPreviewStop<CR>", { buffer = true, desc = "Stop Markdown Preview" })
+        vim.keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>",
+            { buffer = true, desc = "Toggle Markdown Preview" })
+    end,
+})
