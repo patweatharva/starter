@@ -4,6 +4,7 @@ vim.g.maplocalleader = " "
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+vim.g.lua_snippets_path = vim.fn.stdpath("config") .. "/lua/lua_snippets"
 
 if not vim.uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
