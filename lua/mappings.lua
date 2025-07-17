@@ -28,11 +28,12 @@ end)
 
 -- greatest remap ever
 map("x", "<leader>p", [["_dP]])
+vim.keymap.del("n", "<leader>pt")
+map("i", "<C-v>", "<C-r>+", { noremap = true, silent = true, desc = "Paste system clipboard in insert mode" })
 
 -- next greatest remap ever : asbjornHaland
--- map({"n", "v"}, "<leader>y", [["+y]])
--- map("n", "<leader>Y", [["+Y]])
-
+map({"n", "v"}, "<leader>y", [["+y]])
+map("n", "<leader>Y", [["+Y]])
 map({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
@@ -40,7 +41,7 @@ map("i", "<C-c>", "<Esc>")
 
 map("n", "Q", "<nop>")
 -- map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-map("n", "<leader>f", vim.lsp.buf.format)
+-- map("n", "<leader>f", vim.lsp.buf.format)
 
 map("n", "<C-k>", "<cmd>cnext<CR>zz")
 map("n", "<C-j>", "<cmd>cprev<CR>zz")
