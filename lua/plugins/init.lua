@@ -68,4 +68,9 @@ return {
         end,
         ft = { "markdown" },
     },
+    {
+        "basola21/PDFview",
+        lazy = false,
+        dependencies = { "nvim-telescope/telescope.nvim" }
+    },
 }

@@ -77,3 +77,9 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>", { buffer = true, desc = "Toggle Markdown Preview" })
   end,
 })
+
+-- Navigate to the next page in the PDF
+map("n", "<leader>jj", "<cmd>:lua require('pdfview.renderer').next_page()<CR>", { desc = "PDFview: Next page" })
+--
+-- -- Navigate to the previous page in the PDF
+map("n", "<leader>kk", "<cmd>:lua require('pdfview.renderer').previous_page()<CR>", { desc = "PDFview: Previous page" })
